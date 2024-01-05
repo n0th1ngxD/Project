@@ -14,7 +14,7 @@ const products = [
         stars: 5,
         image: "../assets/a1.png",
         categories: "shirts",
-        id: 1,
+        id: 0,
         sold: 1175,
     },
     {
@@ -32,7 +32,7 @@ const products = [
         stars: 5,
         image: "../assets/a2.png",
         categories: "shirts",
-        id: 2,
+        id: 1,
         sold: 1290,
     },
     {
@@ -49,7 +49,7 @@ const products = [
         stars: 5,
         image: "../assets/a3.png",
         categories: "sweater",
-        id: 3,
+        id: 2,
         sold: 1924,
     },
     {
@@ -66,7 +66,7 @@ const products = [
 
         stars: 5,
         image: "../assets/a4.png",
-        id: 4,
+        id: 3,
         sold: 2394,
     },
 ];

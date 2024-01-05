@@ -40,9 +40,9 @@ for(let i = 0; i < 4; i++) {
         }
         trendingDiv.innerHTML += `
             <div class="t-ps" onclick="openPro(${pro[i].id})">
-                <a href=""><img src="${pro[i].image}" alt="Not Found"></a>
+                <img src="${pro[i].image}" alt="Not Found">
                 <div class="i4">
-                    <h3><a href="">Name: ${pro[i].name}</a></h3>
+                    <h3>Name: ${pro[i].name}</h3>
                     <h3>Cost: ${pro[i].cost}</h3>
                     <h3>Star: ${star}</h3>
                 </div>

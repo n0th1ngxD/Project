@@ -69,3 +69,5 @@ function signup() {
         console.log("Not match");
     }
 }
+
+const alert = document.querySelector("#alert");

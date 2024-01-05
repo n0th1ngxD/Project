@@ -58,9 +58,12 @@ for(let i = 0; i < proData.length; i++) {
 const cartQuantity = document.querySelector("#cartNb");
 
 let check = 0;
-let changeId;
+let check2 = 0;
+let changeId = 0;
 
 function addToCart(cartId) {
+    console.log("cartId: ", cartId);
+
     // uCart.push(
     //     {
     //         id: cartId,
@@ -73,17 +76,29 @@ function addToCart(cartId) {
             check += 1;
         }
     }
-    if(check == uCart.length) {
+    check2 = check;
+    check = 0;
+    console.log("checked: ", check2);
+    // prId = uCart.findIndex((obj => obj.id == cartId));
+    if(check2 == uCart.length) {
+        console.log("check: ", check);
+        console.log("uCart: ", uCart.length);
         uCart.push(
             {
+                name: proData[cartId].name,
+                cost: proData[cartId].cost,
+                stars: proData[cartId].stars,
+                image: proData[cartId].image,
                 id: cartId,
                 quantity: cartQuantity.value,
             },
         );
+        console.log(`added id: ${cartId}`);
         localStorage.setItem("cart", JSON.stringify(uCart));
     } else {
-        changeId = uCart.findIndex((obj => obj.id == cartId));
-        uCart[changeId].quantity = cartQuantity.value;
+        // changeId = uCart.findIndex((obj => obj.id == cartId));
+        uCart[cartId].quantity = cartQuantity.value;
         localStorage.setItem("cart", JSON.stringify(uCart));
+        console.log(`changed id: ${cartId}!`);
     }
 }

@@ -37,9 +37,9 @@ for(let key of products) {
     }
     trendingDiv.innerHTML += `
         <div class="t-ps" onclick="openPro(${key.id})">
-            <a href=""><img src="${key.image}" alt="Not Found"></a>
+            <img src="${key.image}" alt="Not Found">
             <div class="i4">
-                <h3><a href="">Name: ${key.name}</a></h3>
+                <h3>Name: ${key.name}</h3>
                 <h3>Cost: ${key.cost}</h3>
                 <h3>Star: ${star}</h3>
             </div>
