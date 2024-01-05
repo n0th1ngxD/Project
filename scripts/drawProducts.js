@@ -2,6 +2,7 @@ const productDiv = document.querySelector("#product");
 const openingPro = JSON.parse(localStorage.getItem("opening"));
 const proData = JSON.parse(localStorage.getItem("products"));
 const uCart = JSON.parse(localStorage.getItem("cart"));
+const DPalert = document.querySelector("#DPalert");
 
 let star;
 
@@ -94,11 +95,15 @@ function addToCart(cartId) {
             },
         );
         console.log(`added id: ${cartId}`);
+        DPalert.style.display = "unset";
+        DPalert.innerHTML = "Added Successfully!";
         localStorage.setItem("cart", JSON.stringify(uCart));
     } else {
         // changeId = uCart.findIndex((obj => obj.id == cartId));
         uCart[cartId].quantity = cartQuantity.value;
         localStorage.setItem("cart", JSON.stringify(uCart));
         console.log(`changed id: ${cartId}!`);
+        DPalert.style.display = "unset";
+        DPalert.innerHTML = "Changed Successfully!"
     }
 }
