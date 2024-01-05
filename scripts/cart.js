@@ -12,6 +12,7 @@ let star;
 let proQuan;
 
 function displayCart() {
+    cartDiv.innerHTML = "";
     for(let key of uCart) {
         proQuan = key.quantity;
         if(key.stars == 1) {
@@ -53,24 +54,13 @@ function displayCart() {
                     <h3>${key.cost}</h3>
                     <span>${star}</span>
                     <div class="after">
-                        <div class="quantity">
-                            <button onclick="minus()">-</button>
-                            <input type="number" id="quantt" value="${proQuan}">
-                            <button onclick="add()">+</button>
-                        </div>
+                        <p>${key.quantity}</p>
                     <button onclick="removeFromCart(${key.id})" class="remove">Remove</button>
                     </div>
                 </div>
             </div>
             `;
     }
-}
-
-// const quantt = document.querySelector("#quantt");
-
-function minus() {
-    proQuan -= 1;
-    displayCart();
 }
 
 displayCart();

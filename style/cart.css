@@ -75,3 +75,7 @@
     text-decoration: underline;
     color: #ff0000;
 }
+
+.home {
+    height: 100vh;
+}
