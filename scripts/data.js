@@ -15,6 +15,7 @@ const products = [
         image: "../assets/a1.png",
         categories: "shirts",
         id: 1,
+        sold: 1175,
     },
     {
         name: "Áo Sơ Mi Nam Tay Dài Flannel Kẻ Caro Nhãn Trang Trí Form Loose",
@@ -28,10 +29,11 @@ const products = [
         Họa tiết nhãn trang trí với dòng chữ” TO GIVE LIFE MEANING” đầy ý nghĩa, tạo điểm nhấn.
         Là item thích hợp để phối với nhiều phong cách từ thanh lịch, năng động đến cá tính đầy chất đường phố.`,
 
-        stars: 4,
+        stars: 5,
         image: "../assets/a2.png",
         categories: "shirts",
         id: 2,
+        sold: 1290,
     },
     {
         name: "Áo Len Nam Dệt Kim Modal Rayon Họa Tiết Form Fitted",
@@ -48,6 +50,7 @@ const products = [
         image: "../assets/a3.png",
         categories: "sweater",
         id: 3,
+        sold: 1924,
     },
     {
         name: "Áo Khoác Chần Bông Nam Cổ Trụ Phối Rib Form Regular",
@@ -64,6 +67,7 @@ const products = [
         stars: 5,
         image: "../assets/a4.png",
         id: 4,
+        sold: 2394,
     },
 ];
 
@@ -88,8 +92,11 @@ const users = [
 
 let oPro = 1;
 
+const cart = [];
+
 localStorage.setItem("products", JSON.stringify(products));
 // localStorage.setItem("user", JSON.stringify(users));
 // localStorage.setItem("opening", JSON.stringify(oPro));
 // localStorage.setItem("cUser", JSON.stringify(currentUser));
 
+// localStorage.setItem("cart", JSON.stringify(cart));
