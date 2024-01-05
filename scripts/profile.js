@@ -23,8 +23,10 @@ function changeName() {
     displayProfile();
 }
 function changeEmail() {
-    cE = `<h4>Email: <input type="text" value="${cU[0].gmail}" id="c-email"/><input type="button" value="Change Email" onclick="changedEmail()"></h4>`;
-    displayProfile();
+    // cE = `<h4>Email: <input type="text" value="${cU[0].gmail}" id="c-email"/><input type="button" value="Change Email" onclick="changedEmail()"></h4>`;
+    // displayProfile();
+    alert("Wait!");
+    alert("YOU CANNOT CHANGE YOUR EMAIL!!!");
 }
 function changedName() {
     cU[0].name = document.querySelector("#c-name").value;
@@ -33,15 +35,17 @@ function changedName() {
     for(i = 0; i < userList.length; i++) {
         if(userList[i].gmail == cU[0].gmail) {
             userList[i].name = cU[0].name;
+            console.log("casdasdasd");
+            localStorage.setItem("user", JSON.stringify(userList));
         }
     }
     displayProfile();
 }
-function changedEmail() {
-    cU[0].gmail = document.querySelector("#c-email").value;
-    localStorage.setItem("cUser", JSON.stringify(cU));
-    cE = `<h4>Email: ${cU[0].gmail} <input type="button" value="Change Email" onclick="changeEmail()"></h4>`;
-    displayProfile();
-}
+// function changedEmail() {
+//     cU[0].gmail = document.querySelector("#c-email").value;
+//     localStorage.setItem("cUser", JSON.stringify(cU));
+//     cE = `<h4>Email: ${cU[0].gmail} <input type="button" value="Change Email" onclick="changeEmail()"></h4>`;
+//     displayProfile();
+// }
 
 displayProfile();

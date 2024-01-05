@@ -31,6 +31,7 @@ function signin() {
                 }
             );
             localStorage.setItem("cUser", JSON.stringify(curUser));
+            // setTimeout(1000);
             location.href = "../html/index.html";
         }
         // } else if(iGmail.value != user[i].gmail || iPassword.value != user[i].password) {
