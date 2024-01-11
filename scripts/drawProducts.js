@@ -3,6 +3,7 @@ const openingPro = JSON.parse(localStorage.getItem("opening"));
 const proData = JSON.parse(localStorage.getItem("products"));
 const uCart = JSON.parse(localStorage.getItem("cart"));
 const DPalert = document.querySelector("#DPalert");
+const alertP = document.querySelector("#alert");
 
 let star;
 
@@ -43,14 +44,14 @@ for(let i = 0; i < proData.length; i++) {
         <img src="${proData[i].image}" alt="Not Found">
         <div class="p-infor">
             <h3>${proData[i].name}</h3>
-            <h3>${proData[i].cost}</h3>
+            <h3>${proData[i].cost}000đ</h3>
             <div class="des">
                 <p>${proData[i].description}</p>
             </div>
             <h3>Stars: ${star}</h3>
 
             <input type="number" placeholder="Số lượng" id="cartNb"/>
-            <button onclick="addToCart(${proData[i].id})"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button onclick="addToCart(${proData[i].id})" class="myBtn"><i class="fa-solid fa-cart-shopping"></i></button>
         </div>
         `;
     }
@@ -96,14 +97,16 @@ function addToCart(cartId) {
         );
         console.log(`added id: ${cartId}`);
         DPalert.style.display = "unset";
-        DPalert.innerHTML = "Added Successfully!";
+        alertP.innerHTML = "Added Successfully!";
         localStorage.setItem("cart", JSON.stringify(uCart));
+        // DPalert.style.display = "none";
     } else {
         // changeId = uCart.findIndex((obj => obj.id == cartId));
         uCart[cartId].quantity = cartQuantity.value;
         localStorage.setItem("cart", JSON.stringify(uCart));
         console.log(`changed id: ${cartId}!`);
         DPalert.style.display = "unset";
-        DPalert.innerHTML = "Changed Successfully!"
+        alertP.innerHTML = "Changed Successfully!"
+        // DPalert.style.display = "none";
     }
 }

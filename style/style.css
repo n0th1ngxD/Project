@@ -40,12 +40,41 @@ a {
     height: 500px;
     background-color: rgba(222, 0, 0, 0.576);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .banner img {
     width: 20%;
+}
+
+.banner button {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #df4949;
+    color: #df4949;
+    background-color: #ffffff;
+    font-size: 16px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+}
+
+.banner button:hover {
+    color: #ffffff;
+    background-color: #df4949;
+    cursor: pointer;
+}
+
+.banner h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.banner h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 .logo a, #footer a {
@@ -426,22 +455,17 @@ a {
     width: 200px;
     border-radius: 5px;
 }
+
 .subscribe button {
     height: 54px;
     width: 54px;
-    border-radius: 5px;
-    color: #be5757;
-}
-.subscribe button:hover {
-    cursor: pointer;
-    color: #ec6c6c;
 }
 
-.subscribe input[type="text"], .subscribe button {
+.subscribe input[type="text"] {
     border: 2px solid #be5757;
     background-color: #ffefef;
 }
-.subscribe input[type="text"]:hover, .subscribe button:hover {
+.subscribe input[type="text"]:hover {
     border: 2px solid #ec6c6c;
 }
 
@@ -499,18 +523,8 @@ a {
 #product button {
     width: 35px;
     height: 35px;
-    border: none;
-    /* border-bottom: 3px solid #da4f4f; */
-    border-radius: 5px;
-    background-color: #da4f4f;
-    font-size: 16px;
     margin-top: 14px;
     margin-bottom: 8px;
-}
-
-#product button:hover {
-    background-color: #d96c6c;
-    cursor: pointer;
 }
 
 #product input {
@@ -544,19 +558,39 @@ a {
     width: auto;
     border: 2px solid #eaebed;
     border-radius: 5px;
-    display: flex;
     margin-left: 10px;
     margin-top: 525px;
     display: none;
-}
-
-.a-line {
-    height: 70px;
-    width: 2px;
-    background-color: #ff0000;
+    border-left: 2px solid #ff0000;
 }
 
 .alert p {
     margin-left: 3px;
     margin-top: 25px;
+}
+
+#backtotop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    outline: none;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.myBtn {
+    border-radius: 5px;
+    border: 2px solid #df4949;
+    color: #df4949;
+    background-color: #ffffff;
+    font-size: 16px;
+}
+
+.myBtn:hover {
+    cursor: pointer;
+    background-color: #df4949;
+    color: #ffffff;
 }

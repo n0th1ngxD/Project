@@ -94,8 +94,7 @@ footerDiv.innerHTML = `
             <form>
                 <div class="subscribe">
                     <input type="text" id="s-mail" placeholder="Email">
-                    <button type="submit" onclick="thanks()"><i
-                            class="fa-solid fa-paper-plane fa-xl"></i></button>
+                    <button type="submit" onclick="thanks()" class="myBtn"><i class="fa-solid fa-paper-plane fa-xl"></i></button>
                 </div>
             </form>
         </div>
@@ -106,13 +105,36 @@ footerDiv.innerHTML = `
         referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 <div class="lower-footer">
-    <p>© 2023 All Rights Reserved</p>
+    <p>© 2024 All Rights Reserved</p>
     <img src="https://ecommerce-vanillajs-mindx.netlify.app/assets/payment-option.png" alt="PayMethod...">
 </div>
 `;
+
+const home = document.querySelector(".home");
+
+home.innerHTML += `
+    <button onclick="topFunction()" id="backtotop" title="Go to top" class="myBtn"><i class="fa-solid fa-arrow-up"></i></button>
+`
 
 const mailIp = document.querySelector("#s-mail");
 
 function thanks() {
     alert(`Sent to ${mailIp.value}! Thanks you!`);
+}
+
+let mybutton = document.getElementById("backtotop");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }

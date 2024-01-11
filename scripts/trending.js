@@ -43,7 +43,7 @@ for(let i = 0; i < 4; i++) {
                 <img src="${pro[i].image}" alt="Not Found">
                 <div class="i4">
                     <h3>Name: ${pro[i].name}</h3>
-                    <h3>Cost: ${pro[i].cost}</h3>
+                    <h3>Cost: ${pro[i].cost}000đ</h3>
                     <h3>Star: ${star}</h3>
                 </div>
             </div>

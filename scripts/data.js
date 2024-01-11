@@ -1,7 +1,7 @@
 const products = [
     {
         name: "Áo Sơ Mi Nam Tay Dài Flannel Túi Đắp Kẻ Caro Form Regular",
-        cost: "589.000",
+        cost: 589,
         description: `Áo Sơ Mi Nam Tay Dài Flannel Túi Đắp Kẻ Caro Form Regular là một kiểu áo sành điệu, cùng nhiều tone màu trung tính dễ mix&match cùng nhiều item khác nhau:
 
         Với chất liệu cotton cào 2 mặt của vải, mềm mịn và thoáng mát cho người mặc
@@ -19,7 +19,7 @@ const products = [
     },
     {
         name: "Áo Sơ Mi Nam Tay Dài Flannel Kẻ Caro Nhãn Trang Trí Form Loose",
-        cost: "589.000",
+        cost: 589,
         description: `Áo Sơ Mi Nam Tay Dài Flannel Kẻ Caro Nhãn Trang Trí Form Loose được thiết kế theo phong cách hiện đại, trẻ trung nhưng cũng pha thêm vẻ đẹp xưa cũ độc đáo, phù hợp với mọi đối tượng:
 
         Chất vải cotton cào bông 2 mặt, vải có độ mềm mịn và tạo được cảm giác thoáng mát
@@ -37,7 +37,7 @@ const products = [
     },
     {
         name: "Áo Len Nam Dệt Kim Modal Rayon Họa Tiết Form Fitted",
-        cost: "785.000",
+        cost: 785,
         description: `Áo Len Nam Dệt Kim Modal Rayon Họa Tiết Form Fitted là kiểu áo thanh lịch, điển trai dành cho các chàng:
 
         Chất len dệt kim mềm mại, giữ nhiệt cơ thể
@@ -54,7 +54,7 @@ const products = [
     },
     {
         name: "Áo Khoác Chần Bông Nam Cổ Trụ Phối Rib Form Regular",
-        cost: "1.374.000",
+        cost: 1374,
         description: `Áo Khoác Chần Bông Nam Cổ Trụ Phối Rib Form Regular - 10F23JAC007 được thiết kế dành cho chàng trai năng động. Mang xu hướng thời trang mới nhất, và là mẫu áo khoác ưa chuộng vì:
 
         Chất liệu Polyester có nhiều ưu điểm nổi trội như chống nhăn, chống thấm tốt và độ bền cao. 

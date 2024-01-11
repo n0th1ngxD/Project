@@ -18,6 +18,22 @@
 
 <body>
     <div class="home">
+        <div class="forward">
+            <div class="top-social">
+                <div class="top-facebook" onclick="location.href = `https://facebook.com`">
+                    <i class="fa-brands fa-facebook fa-xl"></i>
+                </div>
+                <div class="top-phone" onclick="alert(`The phone number is: +48 01234567890`)">
+                    <i class="fa-solid fa-phone fa-xl"></i>
+                </div>
+                <div class="top-twitter" onclick="location.href = `https://twitter.com`">
+                    <i class="fa-brands fa-twitter fa-xl"></i>
+                </div>
+                <div class="top-instagram" onclick="location.href = `https://instagram.com`">
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                </div>
+            </div>
+        </div>
         <div class="nav">
             <div class="logo">
                 <a href="#">
@@ -32,9 +48,13 @@
 
             </div>
         </div>
+
+        
         <div class="banner">
-            <h3>des</h3>
-            <img src="../assets/banner.png" alt="Not Found">
+            <h3><span style="color: rgb(0, 184, 160)">CS</span>tore</h3>
+            <h1><span style="color: #e33d3d;">FA</span><span style="color: #de2626;">SH</span><span style="color: #d60f0f;">IO</span><span style="color: #d90000;">N S</span><span style="color: #e80000;">AL</span><span style="color: #ff0000;">E</span></h1>
+            <h4>CLOTHES FOR MENS, WOMENS AND CHILDRENS</h4>
+            <button onclick="location.href = '../html/store.html'">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
         </div>
         <div class="trending-products">
             <div class="titles"><span style="color: #ff0000">T</span>rending <span
@@ -116,8 +136,83 @@
     <script src="../scripts/open.js"></script>
 
     <script>
-
+        
     </script>
+
+    <style>
+        .forward {
+            height: 200px;
+            width: 50px;
+            margin-left: 10px;
+            margin-top: 180px;
+        }
+        
+        .top-social {
+            display: flex;
+            flex-direction: column;
+            height: 280px;
+            justify-content: space-around;
+        }
+
+        .top-social div {
+            background-color: #ffffff;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 9999px;
+        }
+
+        .top-facebook {
+            color: #0866ff;
+            border: 2px solid #0866ff;
+        }
+
+        .top-facebook:hover {
+            cursor: pointer;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            background-color: #0866ff;
+        }
+
+        .top-phone {
+            color: #03ec77;
+            border: 2px solid #03ec77;
+        }
+        
+        .top-phone:hover {
+            cursor: pointer;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            background-color: #03ec77;
+        }
+
+        .top-twitter {
+            color: #1d9bf0;
+            border: 2px solid #1d9bf0;
+        }
+        
+        .top-twitter:hover {
+            cursor: pointer;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            background-color: #1d9bf0;
+        }
+        
+        .top-instagram {
+            color: #cb2052;
+            border: 2px solid #cb2052;
+        }
+        
+        .top-instagram:hover {
+            cursor: pointer;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            background-color: #cb2052;
+        }
+
+    </style>
 </body>
 
 </html>
