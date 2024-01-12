@@ -81,20 +81,25 @@ const users = [
         gmail: "vun9guy3n09@gmail.com",
         password: "nothinghere",
         avatar: `https://i.pinimg.com/1200x/63/f8/fb/63f8fbab7ef0b960dff3913c0c27a9e1.jpg`,
+        role: "owner",
     },
     {
         name: "Ai",
         gmail: "ai@gmail.com",
         password: "ai",
         avatar: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPuLEcucKM6ry4WmnqHTaBwnKTAZkGxpn3wyJoTqumhQ&s`,
+        role: "admin",
     },
 ];
+
+let soldProducts = 0;
 
 let oPro = 1;
 
 const cart = [];
 
 localStorage.setItem("products", JSON.stringify(products));
+// localStorage.setItem("soldProducts", JSON.stringify(soldProducts));
 // localStorage.setItem("user", JSON.stringify(users));
 // localStorage.setItem("opening", JSON.stringify(oPro));
 // localStorage.setItem("cUser", JSON.stringify(currentUser));

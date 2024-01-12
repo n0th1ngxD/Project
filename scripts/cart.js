@@ -2,6 +2,7 @@ const cUr = JSON.parse(localStorage.getItem("cUser"));
 let uCart = JSON.parse(localStorage.getItem("cart"));
 const cartDiv = document.querySelector("#container");
 const aPro = JSON.parse(localStorage.getItem("products"));
+let soldPro = JSON.parse(localStorage.getItem("soldProducts"));
 
 if(cUr.length == 0) {
     location.href = "../html/signin.html";
@@ -54,7 +55,7 @@ function displayCart() {
                 <div class="c-infor">
                     <h3>${key.name}</h3>
                     <h3>${key.cost}000đ</h3>
-                    <span>${star}</span>
+                    <span>Stars: ${star}</span>
                     <div class="after">
                         <p>${key.quantity}</p>
                     <button onclick="removeProductInCart(${key.id})" class="remove">Remove</button>
@@ -73,7 +74,7 @@ function displayCart() {
             <div class="total">
                 <div class="t-cost">
                     <p>Subtotal: ${subtotal}000đ</p>
-                    <p>Shipping: 13đ</p>
+                    <p>Shipping: 13000đ</p>
                     <p>Total: ${subtotal + 13}000đ</p>
                 </div>
                 <button class="checkout myBtn" onclick="checkout()">Checkout <i class="fa-solid fa-arrow-right"></i></button>
@@ -93,9 +94,13 @@ function clearCart() {
 }
 
 function checkout() {
+    for(let key of uCart) {
+        soldPro += (key.quantity);
+    }
     alert("Checked out: " + subtotal + 13 + "đ");
     uCart = [];
     localStorage.setItem("cart", JSON.stringify(uCart));
+    localStorage.setItem("soldProducts", JSON.stringify(soldPro));
     displayCart();
 }
 

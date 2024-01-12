@@ -10,7 +10,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/store.css">
 
 </head>
 <body>
@@ -28,6 +27,12 @@
             <div id="ua"></div>
         </div>
         <div class="space"></div>
+        <div class="search-area">
+            <div class="search">
+                <input type="text" id="searchPro" class="searchText" placeholder="Search">
+                <button class="searchBtn" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
         <div class="body">
             <div class="titles"><span style="color: #ff0000;">S</span>tore</div>
             <div class="t-products" id="t-products"></div>
@@ -36,9 +41,37 @@
     <div class="space"></div>
     <div id="footer"></div>
 
-    <script src="../scripts/trending.js"></script>
+    <script src="../scripts/products.js"></script>
     <script src="../scripts/data.js"></script>
     <script src="../scripts/main-ui.js"></script>
     <script src="../scripts/open.js"></script>
+
+    <style>
+        .body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+
+    <script>
+        const searchInput = document.querySelector("#searchPro");
+        const st_pros = JSON.parse(localStorage.getItem("products"));
+
+        function search() {
+            console.log(searchInput.value.toLowerCase());
+
+            for (let i = 0; i < st_pros.length; i++) {
+                const itemText = st_pros[i].name.toLowerCase();
+    
+                if (itemText.includes(searchInput.value.toLowerCase())) {
+                    alert(st_pros[i].name);
+                } else {
+                    
+                }
+            }
+        }
+
+        </script>
 </body>
 </html>

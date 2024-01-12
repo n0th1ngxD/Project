@@ -28,6 +28,7 @@ function signin() {
                     gmail: user[i].gmail,
                     password: user[i].password,
                     avatar: user[i].avatar,
+                    role: user[i].role,
                 }
             );
             localStorage.setItem("cUser", JSON.stringify(curUser));
@@ -35,10 +36,13 @@ function signin() {
             location.href = "../html/index.html";
         }
         // } else if(iGmail.value != user[i].gmail || iPassword.value != user[i].password) {
-        //     console.log("no");
+            //     console.log("no");
         // }
     }
 }
+
+const siuAlertDiv = document.querySelector("#siuAlert");
+const siuAlert = document.querySelector("#alert");
 
 function signup() {
     // for(let i = 0; i < user.length; i++) {
@@ -52,6 +56,7 @@ function signup() {
                 gmail: uGmail.value,
                 password: uPassword.value,
                 avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJOJ1Tp4uMgO83lKjiK5dXxoR_uKL2rswaMDprr9TeFQ&s",
+                role: "none",
             }
         );
         curUser.push(
@@ -60,14 +65,14 @@ function signup() {
                 gmail: uGmail.value,
                 password: uPassword.value,
                 avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJOJ1Tp4uMgO83lKjiK5dXxoR_uKL2rswaMDprr9TeFQ&s",
+                role: "none",
             }
         );
         localStorage.setItem("cUser", JSON.stringify(curUser));
         localStorage.setItem("user", JSON.stringify(user));
         location.href = "../html/index.html";
     } else {
-        console.log("Not match");
+        siuAlert.innerHTML = `Not match!`;
+        siuAlertDiv.style.display = "unset";
     }
 }
-
-const alert = document.querySelector("#alert");

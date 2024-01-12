@@ -5,9 +5,9 @@ console.log(cU);
 
 const navDiv = document.querySelector("#nav");
 navDiv.innerHTML = `
-<a href="./index.html"><span style="color: rgb(201, 0, 0)">H</span>ome</a>
-<a href="./store.html"><span style="color: rgb(201, 1, 1)">S</span>tore</a>
-<a href="./cart.html"><span style="color: rgb(201, 1, 1)">C</span>art</a>
+<a href="./index.html"><i class="fa-solid fa-house"></i><span style="color: rgb(201, 0, 0)">H</span>ome</a>
+<a href="./store.html"><i class="fa-solid fa-bag-shopping"></i><span style="color: rgb(201, 1, 1)">S</span>tore</a>
+<a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i><span style="color: rgb(201, 1, 1)">C</span>art</a>
 `;
 
 // user
@@ -25,26 +25,29 @@ if(cU.length == 0) {
         </div>
         <div class="drop" tabindex="0">
             <a href="../html/profile.html"><div><p>View Profile</p></div></a>
-            <a href="../html/cart.html"><div><p>View Cart</p></div></a>
+            <a href="../html/cart.html"><div><p><i class="fa-solid fa-cart-shopping"></i> View Cart</p></div></a>
             <input type="button" value="Sign Out" onclick="signout()">
         </div>
     </div>`;
 }
 
-if(cU.length != 0 && cU[0].password == "nothinghere") {
-    userDiv.innerHTML = 
-    `<div id="user">
-        <div class="area">
-            <img src="${cU[0].avatar}" alt="" class="userAvt">
-            <p>${cU[0].name}<i class="fa-solid fa-crown" style="color: aqua;"></i></i></p>
-        </div>
-        <div class="drop" tabindex="0">
-            <a href="../html/profile.html"><div><p>View Profile</p></div></a>
-            <a href="../html/cart.html"><div><p>View Cart</p></div></a>
-            <a href="../html/admin.html"><div><p>Admin</p></div></a>
-            <input type="button" value="Sign Out" onclick="signout()">
-        </div>
-    </div>`;
+if(cU.length != 0) {
+    if(cU[0].role == "owner" || cU[0].role == "admin") {
+        console.log("owner");
+        userDiv.innerHTML = 
+        `<div id="user">
+            <div class="area">
+                <img src="${cU[0].avatar}" alt="" class="userAvt">
+                <p>${cU[0].name}<i class="fa-solid fa-crown fa-fade" style="color: aqua;"></i></i></p>
+            </div>
+            <div class="drop" tabindex="0">
+                <a href="../html/profile.html"><div><p>View Profile</p></div></a>
+                <a href="../html/cart.html"><div><p><i class="fa-solid fa-cart-shopping"></i> View Cart</p></div></a>
+                <a href="../html/admin.html"><div><p>Admin</p></div></a>
+                <input type="button" value="Sign Out" onclick="signout()">
+            </div>
+        </div>`;
+    }
 }
 
 function signout() {
@@ -93,7 +96,7 @@ footerDiv.innerHTML = `
             </div>
             <form>
                 <div class="subscribe">
-                    <input type="text" id="s-mail" placeholder="Email">
+                    <input type="text" id="s-mail" class="myTextInput" placeholder="Email">
                     <button type="submit" onclick="thanks()" class="myBtn"><i class="fa-solid fa-paper-plane fa-xl"></i></button>
                 </div>
             </form>
@@ -113,7 +116,7 @@ footerDiv.innerHTML = `
 const home = document.querySelector(".home");
 
 home.innerHTML += `
-    <button onclick="topFunction()" id="backtotop" title="Go to top" class="myBtn"><i class="fa-solid fa-arrow-up"></i></button>
+    <button onclick="topFunction()" id="backtotop" title="Go to top" class="myBtn"><i class="fa-solid fa-arrow-up fa-bounce"></i></button>
 `
 
 const mailIp = document.querySelector("#s-mail");

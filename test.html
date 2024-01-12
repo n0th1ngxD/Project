@@ -1,16 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tìm kiếm</title>
+    <script>
+        function search() {
+            // Lấy giá trị từ trường tìm kiếm
+            const searchTerm = document.getElementById("searchTerm").value.toLowerCase();
+
+            // Lấy danh sách các mục cần tìm kiếm
+            // const items = document.getElementsByClassName("item");
+
+            const pro = [
+                {
+                    name: "pro 1",
+                    des: "..."
+                },
+                {
+                    name: "pro 2",
+                    des: "..."
+                },
+                {
+                    name: "pro 3",
+                    des: "..."
+                },
+                {
+                    name: "pro 4",
+                    des: "..."
+                },
+            ];
+
+            // Duyệt qua từng mục để tìm kiếm
+            for (let i = 0; i < pro.length; i++) {
+                const itemText = pro[i].name.toLowerCase();
+
+                // Kiểm tra xem mục có chứa từ khóa tìm kiếm hay không
+                if (itemText.includes(searchTerm)) {
+                    // pro[i].style.display = "block"; // Hiển thị mục nếu khớp
+                    alert(pro[i].name);
+                }
+            }
+        }
+    </script>
 </head>
 <body>
-    <script>
-        let arr = [1, 2, 3, 4, 5];
-        arr = [];
-        console.log(arr); // []
+    <h1>Tìm kiếm</h1>
+    <input type="text" id="searchTerm" placeholder="Nhập từ khóa tìm kiếm">
+    <button type="button" onclick="search()">Tìm kiếm</button>
 
-    </script>
+    <!-- <ul>
+        <li class="item">Mục 1</li>
+        <li class="item">Mục 2</li>
+        <li class="item">Mục 3</li>
+        <li class="item">Mục 4</li>
+    </ul> -->
 </body>
 </html>

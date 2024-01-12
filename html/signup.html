@@ -16,7 +16,7 @@
 <body>
     <div class="home">
         <div class="forward">
-            <div class="alert">
+            <div class="alert" id="siuAlert">
                 <div class="a-line"></div>
                 <p id="alert"></p>
             </div>
@@ -39,13 +39,13 @@
             <div class="signup">
                 <h2>Sign Up</h2>
                 <label for="uUsername">Username</label>
-                <input type="text" id="uUsername" placeholder="Username">
+                <input type="text" class="myTextInput" id="uUsername" placeholder="Username">
                 <label for="uGmail">Gmail</label>
-                <input type="text" id="uGmail" placeholder="Email">
+                <input type="text" class="myTextInput" id="uGmail" placeholder="Email">
                 <label for="uPassword">Password</label>
-                <input type="password" id="uPassword" placeholder="Password">
+                <input type="password" class="myTextInput" id="uPassword" placeholder="Password">
                 <label for="uCfPassword">Confirm Password</label>
-                <input type="password" id="uCfPassword" placeholder="Confirm Password">
+                <input type="password" class="myTextInput" id="uCfPassword" placeholder="Confirm Password">
                 <input type="button" id="uS" value="Sign Up" onclick="signup()" class="myBtn">
                 <p>Already have an account?</p><a href="../html/signin.html">Sign In</a>
             </div>
