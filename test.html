@@ -8,7 +8,7 @@
             const searchTerm = document.getElementById("searchTerm").value.toLowerCase();
 
             // Lấy danh sách các mục cần tìm kiếm
-            // const items = document.getElementsByClassName("item");
+            const items = document.getElementsByClassName("item");
 
             const pro = [
                 {
@@ -37,6 +37,8 @@
                 if (itemText.includes(searchTerm)) {
                     // pro[i].style.display = "block"; // Hiển thị mục nếu khớp
                     alert(pro[i].name);
+                } else {
+                    // pro[i].style.display = "none"; // Ẩn mục nếu không khớp
                 }
             }
         }
