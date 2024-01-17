@@ -1,6 +1,5 @@
 const cUr = JSON.parse(localStorage.getItem("cUser"));
 let uCart = JSON.parse(localStorage.getItem("cart"));
-const cartDiv = document.querySelector("#container");
 const aPro = JSON.parse(localStorage.getItem("products"));
 let soldPro = JSON.parse(localStorage.getItem("soldProducts"));
 
@@ -15,6 +14,10 @@ let proQuan;
 let subtotal = 0;
 
 function displayCart() {
+    const cartDiv = document.querySelector("#cart-products");
+    const totalDiv = document.querySelector("#totalDiv");
+    const main = document.querySelector(".main");
+    console.log(uCart);
     cartDiv.innerHTML = "";
     for(let key of uCart) {
         proQuan = key.quantity;
@@ -55,9 +58,9 @@ function displayCart() {
                 <div class="c-infor">
                     <h3>${key.name}</h3>
                     <h3>${key.cost}000đ</h3>
-                    <span>Stars: ${star}</span>
+                    <span>Đánh giá: ${star}</span>
                     <div class="after">
-                        <p>${key.quantity}</p>
+                        <p>Số lượng: ${key.quantity}</p>
                     <button onclick="removeProductInCart(${key.id})" class="remove">Remove</button>
                     </div>
                 </div>
@@ -65,12 +68,11 @@ function displayCart() {
             `;
             subtotal = subtotal + key.cost*key.quantity;
         }
-    // console.log("subtotal: ", subtotal);
 
     if(uCart.length != 0) {
-        cartDiv.innerHTML += `
-        <button onclick="clearCart()" class="clear-cart myBtn"><i class="fa-solid fa-x"></i> Clear Cart</button>
+        totalDiv.innerHTML = `
         <div class="lower-cart">
+            <button onclick="clearCart()" class="clear-cart myBtn"><i class="fa-solid fa-x"></i> Clear Cart</button>
             <div class="total">
                 <div class="t-cost">
                     <p>Subtotal: ${subtotal}000đ</p>
@@ -82,7 +84,8 @@ function displayCart() {
         </div>
         `;
     } else {
-        cartDiv.innerHTML += `Your cart is empty`;
+        totalDiv.innerHTML = ``;
+        main.innerHTML += `<p style="margin-top: 20px">Your cart is empty</p>`;
     }
 }
 
@@ -106,19 +109,6 @@ function checkout() {
 
 let removeId;
 
-// let ar = [{a: "a"}, {b: "b"}, {c: "c"}];
-// console.log("ar: ", ar);
-// ar.findIndex((ar[0].a == "a"));
-// console.log("ar: ", ar);
-
-// function removeFromCart(key) {
-//     uCart.splice(key, key);
-//     localStorage.setItem("cart", JSON.stringify(uCart));
-//     displayCart();
-
-//     console.log("removed");
-// }
-
 function removeObjectInArrayWithId(list, id) {
     const productId = list.findIndex((obj) => obj.id === id);
 
@@ -129,16 +119,11 @@ function removeObjectInArrayWithId(list, id) {
     return list;
 }
 
-const cAlert = document.querySelector('#alert');
-const cDPAlert = document.querySelector('#DPalert');
-
 function removeProductInCart(proId) {
     removeObjectInArrayWithId(uCart, proId);
     localStorage.setItem("cart", JSON.stringify(uCart));
     displayCart();
 
-    cAlert.innerHTML = `Removed!`;
-    cDPAlert.style.display = "unset";
     console.log("Removed!");
 }
 

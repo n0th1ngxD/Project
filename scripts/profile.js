@@ -12,12 +12,12 @@ let cP;
 for(let i = 0; i < curntUser[0].password.length; i++) {
     cPT += "*"
 }
-
+console.log("cPT: ", cPT);
 let cPass;
+cP = `${cPT}`;
 cPass = `<h4>Password: ${cP} <button onclick="showPass()" class="showHideButton myBtn"><i class="fa-solid fa-eye"></i></button></h4>`;
 
 function displayProfile() {
-    cP = cPT;
     cPT = "";
     us.innerHTML = `
     <div class="img">
@@ -79,6 +79,7 @@ function changePassword() {
 }
 
 function changedPassword() {
+    curntUser[0].password = "";
     curntUser[0].password = document.querySelector("#c-pass").value;
     localStorage.setItem("cUser", JSON.stringify(curntUser));
     changePass = `<input type="button" value="Change Password" onclick="changePassword()">`;

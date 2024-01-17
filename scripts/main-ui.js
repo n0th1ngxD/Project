@@ -5,9 +5,9 @@ console.log(cU);
 
 const navDiv = document.querySelector("#nav");
 navDiv.innerHTML = `
-<a href="./index.html"><i class="fa-solid fa-house"></i><span style="color: rgb(201, 0, 0)">H</span>ome</a>
-<a href="./store.html"><i class="fa-solid fa-bag-shopping"></i><span style="color: rgb(201, 1, 1)">S</span>tore</a>
-<a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i><span style="color: rgb(201, 1, 1)">C</span>art</a>
+<a href="./index.html"><i class="fa-solid fa-house"></i><span style="color: #ffe6d0">H</span>ome</a>
+<a href="./store.html"><i class="fa-solid fa-bag-shopping"></i><span style="color: #ffe6d0">S</span>tore</a>
+<a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i><span style="color: #ffe6d0">C</span>art</a>
 `;
 
 // user

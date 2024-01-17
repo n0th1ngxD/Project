@@ -100,9 +100,9 @@ let oPro = 1;
 const cart = [];
 
 localStorage.setItem("products", JSON.stringify(products));
-// localStorage.setItem("soldProducts", JSON.stringify(soldProducts));
-// localStorage.setItem("user", JSON.stringify(users));
-// localStorage.setItem("opening", JSON.stringify(oPro));
-// localStorage.setItem("cUser", JSON.stringify(currentUser));
+localStorage.setItem("soldProducts", JSON.stringify(soldProducts));
+localStorage.setItem("user", JSON.stringify(users));
+localStorage.setItem("opening", JSON.stringify(oPro));
+localStorage.setItem("cUser", JSON.stringify(currentUser));
 
-// localStorage.setItem("cart", JSON.stringify(cart));
+localStorage.setItem("cart", JSON.stringify(cart));
