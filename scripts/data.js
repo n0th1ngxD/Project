@@ -99,6 +99,8 @@ let oPro = 1;
 
 const cart = [];
 
+const currentUser = [];
+
 localStorage.setItem("products", JSON.stringify(products));
 localStorage.setItem("soldProducts", JSON.stringify(soldProducts));
 localStorage.setItem("user", JSON.stringify(users));
