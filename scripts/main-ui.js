@@ -15,7 +15,7 @@ navDiv.innerHTML = `
 const userDiv = document.querySelector("#ua");
 if(cU.length == 0) {
     console.log("no");
-    userDiv.innerHTML = `<div id="nUser"><a href="../html/signin.html"><span style="color: rgb(201, 1, 1)">S</span>ign in</a><p>/ </p><a href="../html/signup.html"> <span style="color: rgb(201, 1, 1)">S</span>ign up</a></div>`;
+    userDiv.innerHTML = `<div id="nUser"><a href="../html/signin.html"><i class="fa-solid fa-right-to-bracket"></i> <span style="color: rgb(201, 1, 1)">S</span>ign in</a><p>/ </p><a href="../html/signup.html"> <i class="fa-solid fa-user-plus"></i> <span style="color: rgb(201, 1, 1)">S</span>ign up</a></div>`;
 } else if(cU.length != 0 && cU[0].password != "nothinghere") {
     userDiv.innerHTML = 
     `<div id="user">
@@ -24,9 +24,9 @@ if(cU.length == 0) {
             <p>${cU[0].name}</p>
         </div>
         <div class="drop" tabindex="0">
-            <a href="../html/profile.html"><div><p>View Profile</p></div></a>
+            <a href="../html/profile.html"><div><p><i class="fa-solid fa-user"></i> View Profile</p></div></a>
             <a href="../html/cart.html"><div><p><i class="fa-solid fa-cart-shopping"></i> View Cart</p></div></a>
-            <input type="button" value="Sign Out" onclick="signout()">
+            <button onclick="signout()"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</button>
         </div>
     </div>`;
 }
@@ -38,13 +38,14 @@ if(cU.length != 0) {
         `<div id="user">
             <div class="area">
                 <img src="${cU[0].avatar}" alt="" class="userAvt">
-                <p>${cU[0].name}<i class="fa-solid fa-crown fa-fade" style="color: aqua;"></i></i></p>
+                <p>${cU[0].name}<i class="fa-solid fa-crown fa-fade" style="color: aqua;"></i></p>
             </div>
             <div class="drop" tabindex="0">
-                <a href="../html/profile.html"><div><p>View Profile</p></div></a>
+                <a href="../html/profile.html"><div><p><i class="fa-solid fa-user"></i> View Profile</p></div></a>
                 <a href="../html/cart.html"><div><p><i class="fa-solid fa-cart-shopping"></i> View Cart</p></div></a>
-                <a href="../html/admin.html"><div><p>Admin</p></div></a>
-                <input type="button" value="Sign Out" onclick="signout()">
+                <a href="../html/admin.html"><div><p><i class="fa-solid fa-crown fa-fade" style="color: aqua;"></i> Admin</p></div></a>
+                
+                <button onclick="signout()"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</button>
             </div>
         </div>`;
     }

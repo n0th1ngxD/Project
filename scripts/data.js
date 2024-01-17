@@ -66,6 +66,7 @@ const products = [
 
         stars: 5,
         image: "../assets/a4.png",
+        categories: "jacket",
         id: 3,
         sold: 2394,
     },
@@ -81,14 +82,14 @@ const users = [
         gmail: "vun9guy3n09@gmail.com",
         password: "nothinghere",
         avatar: `https://i.pinimg.com/1200x/63/f8/fb/63f8fbab7ef0b960dff3913c0c27a9e1.jpg`,
-        role: "owner",
+        role: "admin",
     },
     {
         name: "Ai",
         gmail: "ai@gmail.com",
         password: "ai",
         avatar: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPuLEcucKM6ry4WmnqHTaBwnKTAZkGxpn3wyJoTqumhQ&s`,
-        role: "admin",
+        role: "none",
     },
 ];
 

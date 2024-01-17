@@ -17,7 +17,7 @@
         <div class="nav">
             <div class="logo">
                 <a href="#">
-                    <span style="color: rgb(0, 184, 160)">CS</span>tore
+                    <span style="color: #ff7500">CS</span>tore
                 </a>
             </div>
             <div class="pages" id="nav">
@@ -28,9 +28,41 @@
         </div>
         <div class="space"></div>
         <div class="search-area">
-            <div class="search">
-                <input type="text" id="searchPro" class="searchText" placeholder="Search">
-                <button class="searchBtn" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="upper-search">
+                <div class="search">
+                    <input type="text" id="searchPro" class="searchText" placeholder="Search">
+                    <button class="searchBtn" id="searchBtn" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="filter-icon" id="filter-icon" onclick="showHideFilter()">
+                    <i class="fa-solid fa-filter"></i>
+                </div>
+            </div>
+            <div class="filter-option">
+                <div class="f-option">
+                    <select id="cost">
+                        <option value="allCost">All Cost</option>
+                        <option value="highestCost">Highest Cost</option>
+                        <option value="lowestCost">Lowest Cost</option>
+                    </select>
+                </div>
+                <div class="f-option">
+                    <select id="categories">
+                        <option value="all">All</option>
+                        <option value="shirts">Shirts</option>
+                        <option value="sweater">Sweater</option>
+                        <option value="jacket">Jacket</option>
+                    </select>
+                </div>
+                <div class="f-option">
+                    <select id="stars">
+                        <option value="allStar">All ⭐</option>
+                        <option value="1Star">1 ⭐</option>
+                        <option value="2Stars">2 ⭐</option>
+                        <option value="3Stars">3 ⭐</option>
+                        <option value="4Stars">4 ⭐</option>
+                        <option value="5Stars">5 ⭐</option>
+                    </select>
+                </div>
             </div>
         </div>
         <div class="body">
@@ -41,7 +73,7 @@
     <div class="space"></div>
     <div id="footer"></div>
 
-    <script src="../scripts/products.js"></script>
+    <script src="../scripts/store.js"></script>
     <script src="../scripts/data.js"></script>
     <script src="../scripts/main-ui.js"></script>
     <script src="../scripts/open.js"></script>
@@ -55,23 +87,64 @@
     </style>
 
     <script>
-        const searchInput = document.querySelector("#searchPro");
-        const st_pros = JSON.parse(localStorage.getItem("products"));
+        // const searchInput = document.querySelector("#searchPro");
+        // const st_pros = JSON.parse(localStorage.getItem("products"));
 
-        function search() {
-            console.log(searchInput.value.toLowerCase());
+        // function search() {
+        //     console.log(searchInput.value.toLowerCase());
 
-            for (let i = 0; i < st_pros.length; i++) {
-                const itemText = st_pros[i].name.toLowerCase();
-    
-                if (itemText.includes(searchInput.value.toLowerCase())) {
-                    alert(st_pros[i].name);
-                } else {
-                    document.querySelector(".t-ps").style.display = "none";
-                }
-            }
-        }
+        //     for (let i = 0; i < st_pros.length; i++) {
+        //         const itemText = st_pros[i].name.toLowerCase();
 
+        //         if (itemText.includes(searchInput.value.toLowerCase())) {
+        //             document.querySelector(".t-ps").style.display = "flex";
+        //         } else {
+        //             document.querySelector(".t-ps").style.display = "none";
+        //         }
+        //     }
+        // }
+
+        // let isShowed = false;
+        // console.log("isShowed: ", isShowed);
+        // check();
+        
+        // function check() {
+        //     if(isShowed == false) {
+        //     document.querySelector(".filter-option").style.opacity = 0;
+        //     // document.querySelector(".filter-option").style.position = "relative";
+        //     document.querySelector(".filter-option").style.visibility = "hidden";
+        //     }
+        //     if(isShowed == true) {
+        //         document.querySelector(".filter-option").style.opacity = 1;
+        //         document.querySelector(".filter-option").style.visibility = "visible";
+        //     }
+        // }
+        
+        // function showHideFilter() {
+        //     if(isShowed == false) {
+        //         isShowed = true;
+        //         // console.log("showed");
+        //         // console.log("isShowed: ", isShowed);
+        //         check();
+        //     } else if(isShowed == true) {
+        //         isShowed = false;
+        //         // console.log("hid");
+        //         // console.log("isShowed: ", isShowed);
+        //         check();
+                
+        //     }
+        // }
+
+        // const proDiv2 = document.querySelector("#t-products");
+        // const searchButton = document.querySelector("#searchBtn");
+        // searchButton.addEventListener("click", function() {
+        //     // console.log("asdasdkl");
+        //     // console.log(event.target.value);
+        //     // console.log("proDiv: ", proDiv);
+        //     proDiv2 = ``;
+        //     console.log("..");
+        //     search();
+        // });
         </script>
 </body>
 </html>

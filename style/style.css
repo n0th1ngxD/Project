@@ -70,7 +70,7 @@ a {
     font-size: 24px;
 }
 .logo a:hover, #footer a:hover {
-    color: rgb(0, 184, 160);
+    color: #ff7500;
 }
 
 .pages {
@@ -161,7 +161,7 @@ a {
 }
 
 #nUser {
-    width: 180px;
+    width: 220px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -196,18 +196,18 @@ a {
     align-items: center;
 }
 
-.drop input {
+.drop button {
     border-top: 1px solid #eaebed;
     border: none;
     background-color: #ffffff;
     width: 165px;
     font-size: 16px;
     margin-top: 15px;
-    color: #ff0000;
 }
 
-.drop input:hover {
+.drop button:hover {
     cursor: pointer;
+    color: #ff0000;
 }
 
 #user {
@@ -616,7 +616,7 @@ a {
     grid-template-columns: repeat(5, 1fr);
 }
 
-.admins, .owners {
+.admins {
     border-top: 1px solid #969696;
 }
 
@@ -688,6 +688,70 @@ a {
 .search-area {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.filter-icon {
+    border-radius: 5px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    width: 38px;
+    margin-top: 4px;
+    /* margin-top: 2px; */
+    background-color: #ff7500;
+}
+
+.upper-search {
+    display: flex;
+}
+
+.filter-option {
+    margin-top: 10px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    height: 100px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+    position: relative;
+    /* opacity: 0;
+    visibility: hidden; */
+}
+
+.filter-option .f-option {
+    background-color: #e9e9e9;
+    height: 100%;
+}
+
+.filter-option select {
+    margin-top: 5px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 2px solid #ff7500;
+    height: 30px;
+
+}
+
+.filter-option > option {
+    height: 30px;
+}
+
+.showHideButton {
+    width: 25px;
+    height: 25px;
+}
+
+.filter-option {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
 }

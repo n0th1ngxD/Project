@@ -22,14 +22,6 @@ informationDiv.innerHTML = `
 `;
 
 for(let i = 0; i < usersLS.length; i++) {
-    if(usersLS[i].role == "owner") {
-        ownersDiv.innerHTML += `
-        <div class="oa">
-            <img src="${usersLS[i].avatar}" alt="" class="oa-avt">
-            <p>${usersLS[i].name}</p>
-        </div>
-        `;
-    }
     if(usersLS[i].role == "admin") {
         adminsDiv.innerHTML += `
         <div class="oa">
