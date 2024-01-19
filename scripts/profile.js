@@ -3,8 +3,8 @@ const us = document.querySelector(".us");
 const userList = JSON.parse(localStorage.getItem("user"));
 const curntUser = JSON.parse(localStorage.getItem("cUser"));
 
-let cN = `<h4>Name: ${cU[0].name} <input type="button" value="Change Name" onclick="changeName()"></h4>`;
-let cE = `<h4>Email: ${cU[0].gmail} <input type="button" value="Change Email" onclick="changeEmail()"></h4>`;
+let cN = `<h4>Name: ${cU[0].name}</h4> <input type="button" value="Change Name" onclick="changeName()">`;
+let cE = `<h4>Email: ${cU[0].gmail}</h4> <input type="button" value="Change Email" onclick="changeEmail()">`;
 let cPT = "";
 let changePass = `<input type="button" value="Change Password" onclick="changePassword()">`;
 let cP;
@@ -15,7 +15,7 @@ for(let i = 0; i < curntUser[0].password.length; i++) {
 console.log("cPT: ", cPT);
 let cPass;
 cP = `${cPT}`;
-cPass = `<h4>Password: ${cP} <button onclick="showPass()" class="showHideButton myBtn"><i class="fa-solid fa-eye"></i></button></h4>`;
+cPass = `<h4>Password: ${cP}</h4> <button onclick="showPass()" class="showHideButton myBtn"><i class="fa-solid fa-eye"></i></button>`;
 
 function displayProfile() {
     cPT = "";
@@ -24,9 +24,9 @@ function displayProfile() {
         <img src="${curntUser[0].avatar}" alt="Not Found" class="pavt">
     </div>
     <div class="uin4">
-        ${cN}
-        ${cE}
-        ${cPass} ${changePass}
+        <div>${cN}</div>
+        <div>${cE}</div>
+        <div>${cPass} ${changePass}</div>
     </div>
     `;
 }

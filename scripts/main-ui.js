@@ -15,8 +15,8 @@ navDiv.innerHTML = `
 const userDiv = document.querySelector("#ua");
 if(cU.length == 0) {
     console.log("no");
-    userDiv.innerHTML = `<div id="nUser"><a href="../html/signin.html"><i class="fa-solid fa-right-to-bracket"></i> <span style="color: rgb(201, 1, 1)">S</span>ign in</a><p>/ </p><a href="../html/signup.html"> <i class="fa-solid fa-user-plus"></i> <span style="color: rgb(201, 1, 1)">S</span>ign up</a></div>`;
-} else if(cU.length != 0 && cU[0].password != "nothinghere") {
+    userDiv.innerHTML = `<div id="nUser"><a href="../html/signin.html"><i class="fa-solid fa-right-to-bracket"></i> <span style="color: #ffe6d0">S</span>ign in</a><p>/ </p><a href="../html/signup.html"> <i class="fa-solid fa-user-plus"></i> <span style="color: #ffe6d0">S</span>ign up</a></div>`;
+} else if(cU.length != 0 && cU[0].role != "admin") {
     userDiv.innerHTML = 
     `<div id="user">
         <div class="area">
@@ -32,8 +32,7 @@ if(cU.length == 0) {
 }
 
 if(cU.length != 0) {
-    if(cU[0].role == "owner" || cU[0].role == "admin") {
-        console.log("owner");
+    if(cU[0].role == "admin") {
         userDiv.innerHTML = 
         `<div id="user">
             <div class="area">

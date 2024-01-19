@@ -13,6 +13,10 @@ const uCfPassword = document.querySelector("#uCfPassword");
 const iS = document.querySelector("#iS");
 const uS = document.querySelector("#uS");
 
+if(curUser.length != 0) {
+    location.href = "../html/index.html";
+}
+
 /////////////////////////
 //Sign In
 
@@ -41,9 +45,6 @@ function signin() {
     }
 }
 
-const siuAlertDiv = document.querySelector("#siuAlert");
-const siuAlert = document.querySelector("#alert");
-
 function signup() {
     // for(let i = 0; i < user.length; i++) {
         
@@ -71,8 +72,5 @@ function signup() {
         localStorage.setItem("cUser", JSON.stringify(curUser));
         localStorage.setItem("user", JSON.stringify(user));
         location.href = "../html/index.html";
-    } else {
-        siuAlert.innerHTML = `Not match!`;
-        siuAlertDiv.style.display = "unset";
     }
 }

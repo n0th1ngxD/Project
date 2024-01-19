@@ -4,7 +4,14 @@ const productsLS = JSON.parse(localStorage.getItem("products"));
 const usersLS = JSON.parse(localStorage.getItem("user"));
 const ownersDiv = document.querySelector("#owners");
 const adminsDiv = document.querySelector("#admins");
+const aCurrentUser = JSON.parse(localStorage.getItem("cUser"));
 let soldPros = JSON.parse(localStorage.getItem("soldProducts"));
+
+for(let i = 0; i < aCurrentUser.length; i++) {
+    if(aCurrentUser[i].role != "admin") {
+        location.href = "../html/index.html";
+    }
+}
 
 informationDiv.innerHTML = `
     <div>
